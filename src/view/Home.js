@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { styled } from "@mui/material/styles";
 import * as THREE from 'three'
 import NET from 'vanta/src/vanta.net'
+import BlurredContainer from '../components/generalContainer';
 
 const PREFIX = 'Home'
 
@@ -25,6 +26,7 @@ const HomeContainer = styled('div')((
       display: 'block',
       width: '100%',
       height: 'calc(100vh - 64px)',
+      zIndex: '1',
     },
   }
 })
@@ -64,6 +66,7 @@ function Home() {
       <div className={classes.home}>
         <div className={classes.background} ref={backgroundRef}>
         </div>
+        <BlurredContainer />
       </div>
     </HomeContainer>
   );
