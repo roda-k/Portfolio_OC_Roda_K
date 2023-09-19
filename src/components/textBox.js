@@ -9,6 +9,7 @@ const classes = {
   coloring: `${PREFIX}-coloring`,
   presentationText: `${PREFIX}-presentationText`,
   alignTextContainer: `${PREFIX}-alignTextContainer`,
+  unskew: `${PREFIX}-unskew`,
 }
 
 const TextBoxContainer = styled('div')((
@@ -20,10 +21,10 @@ const TextBoxContainer = styled('div')((
     [`& .${classes.boxDefaultStyle}`]: {
       display: 'flex',
       flexDirection: 'column',
-      maxHeight: '200px',
+      maxHeight: '250px',
+      maxWidth: '450px',
       padding: '20px 15px 15px 25px',
-      // borderRadius: '10px',
-      transform: 'skewX(15deg)',
+      transform: 'skewX(10deg)',
       background: 'rgba(0, 0, 0, 0.5)',
       backdropFilter: 'blur(10px)',
       zIndex: '10',
@@ -31,6 +32,9 @@ const TextBoxContainer = styled('div')((
     },
     [`& .${classes.coloring}`]: {
       color: '#FFFFFF'
+    },
+    [`& .${classes.unskew}`]: {
+      transform: 'skewX(-10deg)',
     },
     [`& .${classes.alignTextContainer}`]: {
       display: 'flex',
@@ -42,17 +46,17 @@ const TextBoxContainer = styled('div')((
       alignItems: 'flex-start',
       width: 'fit-content',
       margin: '10px 0 10px 0',
-      transform: 'skewX(-15deg)'
+      transform: 'skewX(-10deg)'
     },
   }
 })
 
-function TextBox({ title, firstLine, secondLine}) {
+function TextBox({ title, firstLine = "", secondLine = "" }) {
 
   return (
-    <TextBoxContainer style={{ width: '100%' }}>
+    <TextBoxContainer style={{ display: 'flex', justifyContent: 'center' }}>
       <Box className={classes.boxDefaultStyle}>
-        <Typography variant="h3" color="primary">{title}</Typography>
+        <Typography variant="h3" color="primary" className={classes.unskew}>{title}</Typography>
         <div className={classes.alignTextContainer}>
           <div className={classes.presentationText}>
             <Typography variant="h5" className={classes.coloring}>{firstLine}</Typography>

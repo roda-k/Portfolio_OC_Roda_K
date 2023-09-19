@@ -43,7 +43,7 @@ const AppBarContainer = styled('div')((
 function MyAppBar() {
   return (
     <AppBarContainer>
-        <AppBar position="static">
+        <AppBar position="sticky">
           <Toolbar className={classes.appbarStyle}>
             <Typography className={classes.categoriesStyle} variant="h6" component="div">
               Accueil

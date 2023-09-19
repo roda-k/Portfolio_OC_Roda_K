@@ -18,14 +18,15 @@ const HomeContainer = styled('div')((
 ) => {
   return {
     [`& .${classes.home}`]: {
-      width: '100vw',
+      // width: '100vw',
       height: 'calc(100vh - 64px)',
     },
     [`& .${classes.background}`]: {
-      position: 'absolute',
+      position: 'fixed',
       display: 'block',
       width: '100%',
-      height: 'calc(100vh - 64px)',
+      // height: 'calc(100vh - 64px)',
+      height: '100vh',
       zIndex: '1',
     },
   }

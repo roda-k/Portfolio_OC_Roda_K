@@ -6,11 +6,11 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#8a4ddc',
+      main: '#DBD84D',
       dark: '#703faf',
     },
     secondary: {
-      main: '#8a4ddc',
+      main: '#DBD84D',
     },
     info: {
       main: '#0288d1',
