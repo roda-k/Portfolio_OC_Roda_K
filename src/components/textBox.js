@@ -10,6 +10,7 @@ const classes = {
   presentationText: `${PREFIX}-presentationText`,
   alignTextContainer: `${PREFIX}-alignTextContainer`,
   unskew: `${PREFIX}-unskew`,
+  hidden: `${PREFIX}-hidden`,
 }
 
 const TextBoxContainer = styled('div')((
@@ -55,7 +56,7 @@ function TextBox({ title, firstLine = "", secondLine = "" }) {
 
   return (
     <TextBoxContainer style={{ display: 'flex', justifyContent: 'center' }}>
-      <Box className={classes.boxDefaultStyle}>
+      <Box className={`${classes.boxDefaultStyle} hidden`}>
         <Typography variant="h3" color="primary" className={classes.unskew}>{title}</Typography>
         <div className={classes.alignTextContainer}>
           <div className={classes.presentationText}>

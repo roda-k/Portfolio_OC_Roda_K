@@ -10,6 +10,7 @@ const classes = {
   coloring: `${PREFIX}-coloring`,
   unskew: `${PREFIX}-unskew`,
   iconButtonContainer: `${PREFIX}-iconButtonContainer`,
+  hidden: `${PREFIX}-hidden`,
 }
 
 const WorkCardContainer = styled('div')((
@@ -45,7 +46,7 @@ function WorkCard({ title, logo, description, projectUrl }) {
 
   return (
     <WorkCardContainer style={{ width: '45%', transform: 'skew(15deg, 5deg)', padding: '15px' }}>
-      <div className={classes.workCardStyle}>
+      <div className={`${classes.workCardStyle} hidden`}>
         <img src={logo} className={classes.unskew} alt="kasa-logo" />
         <Typography variant="h6" color="primary" className={classes.unskew}>{title}</Typography>
         <Typography variant="body1" className={`${classes.coloring} ${classes.unskew}`}>{description}</Typography>
