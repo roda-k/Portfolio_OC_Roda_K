@@ -24,7 +24,7 @@ const HomeContainer = styled('div')((
     [`& .${classes.background}`]: {
       position: 'fixed',
       display: 'block',
-      width: '100%',
+      width: '100vw',
       // height: 'calc(100vh - 64px)',
       height: '100vh',
       zIndex: '1',

@@ -44,8 +44,8 @@ const BlurredContainerBox = styled('div')((
     [`& .${classes.titlePlacement}`]: {
       display: 'flex',
       justifyContent: 'flex-start',
-      width: '100%',
-      transform: 'skew(-15deg, -5deg)'
+      // width: '100%',
+      // transform: 'skew(-15deg, -5deg)'
     },
     [`& .${classes.worksContainer}`]: {
       display: 'flex',
@@ -83,11 +83,11 @@ function BlurredContainer() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show')
-      } 
+      } else {
+        entry.target.classList.remove('show')
+      }
       // use this to make animations repeatable
-      // else {
-      //   entry.target.classList.remove('show')
-      // }
+
     })
   })
 
@@ -137,14 +137,14 @@ function BlurredContainer() {
           />
         </div>
         <div className="logo-container hidden">
-          <CssIcon className={`${classes.svgStyling} hidden`}/>
-          <HtmlIcon className={`${classes.svgStyling} hidden`}/>
-          <JsIcon className={`${classes.svgStyling} hidden`}/>
-          <ReactIcon className={`${classes.svgStyling} hidden`}/>
-          <MaterialIcon className={`${classes.svgStyling} hidden`}/>
-          <NodejsIcon className={`${classes.svgStyling} hidden`}/>
-          <MongodbIcon className={`${classes.svgStyling} hidden`}/>
-          <GithubIcon className={`${classes.svgStyling} hidden`}/>
+          <CssIcon className={`${classes.svgStyling} hidden`} />
+          <HtmlIcon className={`${classes.svgStyling} hidden`} />
+          <JsIcon className={`${classes.svgStyling} hidden`} />
+          <ReactIcon className={`${classes.svgStyling} hidden`} />
+          <MaterialIcon className={`${classes.svgStyling} hidden`} />
+          <NodejsIcon className={`${classes.svgStyling} hidden`} />
+          <MongodbIcon className={`${classes.svgStyling} hidden`} />
+          <GithubIcon className={`${classes.svgStyling} hidden`} />
         </div>
       </div>
     </BlurredContainerBox>

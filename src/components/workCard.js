@@ -20,7 +20,8 @@ const WorkCardContainer = styled('div')((
 ) => {
   return {
     [`& .${classes.workCardStyle}`]: {
-      width: '100%',
+      // width: '100%',
+      maxWidth: '390px',
       padding: '20px',
       minHeight: '150px',
       background: 'rgba(0, 0, 0, 0.5)',
@@ -30,13 +31,13 @@ const WorkCardContainer = styled('div')((
       color: '#FFFFFF'
     },
     [`& .${classes.unskew}`]: {
-      transform: 'skew(-15deg, -5deg)',
+      transform: 'skew(-6deg, 0deg)',
     },
     [`& .${classes.iconButtonContainer}`]: {
       width: '100%',
       display: 'flex',
       justifyContent: 'space-around',
-      transform: 'skew(-15deg, -5deg)',
+      transform: 'skew(-6deg, 0deg)',
       marginTop: '10px'
     },
   }
@@ -45,7 +46,7 @@ const WorkCardContainer = styled('div')((
 function WorkCard({ title, logo, description, projectUrl }) {
 
   return (
-    <WorkCardContainer style={{ width: '45%', transform: 'skew(15deg, 5deg)', padding: '15px' }}>
+    <WorkCardContainer style={{ display: 'flex', justifyContent: 'center', width: '100%', transform: 'skew(6deg, 0deg)', marginBottom: '4rem' }}>
       <div className={`${classes.workCardStyle} hidden`}>
         <img src={logo} className={classes.unskew} alt="kasa-logo" />
         <Typography variant="h6" color="primary" className={classes.unskew}>{title}</Typography>
