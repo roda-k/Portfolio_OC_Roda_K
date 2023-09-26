@@ -3,9 +3,10 @@ import { styled } from "@mui/material/styles";
 import kasa from '../assets/LOGO_KASA.png'
 import grimoire from '../assets/MON_GRIMOIRE_ICON.png'
 import debug from '../assets/DEBUG_ICON.png'
-import { ReactComponent as CssIcon } from '../assets/CSS3_ICON.svg'
+// import { ReactComponent as CssIcon } from '../assets/CSS3_ICON.svg'
 import TextBox from "./textBox";
 import WorkCard from "./workCard";
+import MyFooter from "./footer";
 
 
 const PREFIX = 'blurredContainerBox'
@@ -34,7 +35,7 @@ const BlurredContainerBox = styled('div')((
       left: '10%',
       top: '64px',
       width: '80vw',
-      height: 'calc(100vh - 64px)',
+      minHeight: 'calc(100vh - 64px)',
       zIndex: '10',
     },
     [`& .${classes.titlePlacement}`]: {
@@ -58,13 +59,13 @@ const BlurredContainerBox = styled('div')((
       marginBottom: '2rem',
       marginTop: '2rem',
     },
-    [`& .${classes.logoWrapperFilterCss}`]: {
-      position: 'absolute',
-      width: '90%',
-      height: '100%',
-      backgroundImage: `url(${CssIcon})`,
-      zIndex: 12,
-    },
+    // [`& .${classes.logoWrapperFilterCss}`]: {
+    //   position: 'absolute',
+    //   width: '90%',
+    //   height: '100%',
+    //   backgroundImage: `url(${CssIcon})`,
+    //   zIndex: 12,
+    // },
   }
 })
 
@@ -108,7 +109,7 @@ function BlurredContainer() {
             title={'KASA'}
             logo={kasa}
             description={'Création d\'une application de location immobilière avec React'}
-            projectUrl={'https://github.com/roda-k/KasaProject'}
+            projectUrl={'https://roda-k.github.io/KasaProject/'}
           />
           <WorkCard
             title={'MON VIEUX GRIMOIRE'}
@@ -158,6 +159,7 @@ function BlurredContainer() {
             <div className="logo-wrapper-mongodb"></div>
           </div>
         </div>
+        <MyFooter />
       </div>
     </BlurredContainerBox>
   )

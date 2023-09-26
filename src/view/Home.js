@@ -19,7 +19,7 @@ const HomeContainer = styled('div')((
   return {
     [`& .${classes.home}`]: {
       // width: '100vw',
-      height: 'calc(100vh - 64px)',
+      minHeight: 'calc(100vh - 64px)',
     },
     [`& .${classes.background}`]: {
       position: 'fixed',
