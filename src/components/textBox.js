@@ -47,7 +47,7 @@ const TextBoxContainer = styled('div')((
       alignItems: 'flex-start',
       width: 'fit-content',
       margin: '10px 0 10px 0',
-      transform: 'skewX(-3deg)'
+      transform: 'skewX(-10deg)'
     },
   }
 })

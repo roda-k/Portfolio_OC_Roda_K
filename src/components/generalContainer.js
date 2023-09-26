@@ -1,14 +1,9 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import kasa from '../assets/LOGO_KASA.png'
+import grimoire from '../assets/MON_GRIMOIRE_ICON.png'
+import debug from '../assets/DEBUG_ICON.png'
 import { ReactComponent as CssIcon } from '../assets/CSS3_ICON.svg'
-import { ReactComponent as HtmlIcon } from '../assets/HTML5_ICON.svg'
-import { ReactComponent as GithubIcon } from '../assets/GITHUB_ICON.svg'
-import { ReactComponent as JsIcon } from '../assets/JS_ICON.svg'
-import { ReactComponent as MaterialIcon } from '../assets/MATERIAL_ICON.svg'
-import { ReactComponent as MongodbIcon } from '../assets/MONGODB_ICON.svg'
-import { ReactComponent as NodejsIcon } from '../assets/NODEJS_ICON.svg'
-import { ReactComponent as ReactIcon } from '../assets/REACT_ICON.svg'
 import TextBox from "./textBox";
 import WorkCard from "./workCard";
 
@@ -22,6 +17,7 @@ const classes = {
   svgContainer: `${PREFIX}-svgContainer`,
   svgStyling: `${PREFIX}-svgStyling`,
   hidden: `${PREFIX}-hidden`,
+  logoWrapperFilterCss: `${PREFIX}-logoWrapperFilterCss`,
 }
 
 const BlurredContainerBox = styled('div')((
@@ -44,8 +40,6 @@ const BlurredContainerBox = styled('div')((
     [`& .${classes.titlePlacement}`]: {
       display: 'flex',
       justifyContent: 'flex-start',
-      // width: '100%',
-      // transform: 'skew(-15deg, -5deg)'
     },
     [`& .${classes.worksContainer}`]: {
       display: 'flex',
@@ -55,23 +49,21 @@ const BlurredContainerBox = styled('div')((
       width: '100%',
       marginTop: '4rem',
     },
-    // [`& .${classes.svgContainer}`]: {
-    //   display: 'flex',
-    //   justifyContent: 'space-around',
-    //   flexWrap: 'wrap',
-    //   width: '100%',
-    //   marginTop: '4rem',
-    //   background: 'rgba(0, 0, 0, 0.5)',
-    //   backdropFilter: 'blur(10px)',
-    //   transform: 'skew(5deg, 0deg)',
-    //   padding: '20px',
-    // },
-    [`& .${classes.svgStyling}`]: {
-      width: '60px',
-      height: '60px',
+    [`& .${classes.svgContainer}`]: {
+      position: 'relative',
+      display: 'flex',
+      width: '70px',
+      height: '70px',
       transform: 'skew(-5deg, 0deg)',
       marginBottom: '2rem',
       marginTop: '2rem',
+    },
+    [`& .${classes.logoWrapperFilterCss}`]: {
+      position: 'absolute',
+      width: '90%',
+      height: '100%',
+      backgroundImage: `url(${CssIcon})`,
+      zIndex: 12,
     },
   }
 })
@@ -86,7 +78,7 @@ function BlurredContainer() {
       } else {
         entry.target.classList.remove('show')
       }
-      // use this to make animations repeatable
+      // use the else to make animations repeatable or not
 
     })
   })
@@ -111,7 +103,7 @@ function BlurredContainer() {
             title={"Mes projets:"}
           />
         </div>
-        <div className={classes.worksContainer}>
+        <div id="myprojects" className={classes.worksContainer}>
           <WorkCard
             title={'KASA'}
             logo={kasa}
@@ -119,32 +111,52 @@ function BlurredContainer() {
             projectUrl={'https://github.com/roda-k/KasaProject'}
           />
           <WorkCard
-            title={'KASA'}
-            logo={kasa}
-            description={'Création d\'une application de location immobilière avec React'}
-            projectUrl={'https://github.com/roda-k/KasaProject'}
+            title={'MON VIEUX GRIMOIRE'}
+            logo={grimoire}
+            description={'Développement du back-end d\'un site de notation de livres'}
+            projectUrl={'https://github.com/roda-k/MonVieuxGrimoire'}
           />
           <WorkCard
-            title={'KASA'}
-            logo={kasa}
-            description={'Création d\'une application de location immobilière avec React'}
-            projectUrl={'https://github.com/roda-k/KasaProject'}
+            title={'DEBUG'}
+            logo={debug}
+            description={'Débugger et optimiser un site de photographe'}
+            projectUrl={'https://github.com/roda-k/Nindacarducci'}
           />
         </div>
-        <div className={`${classes.titlePlacement} hidden`}>
+        <div id="skills" className={`${classes.titlePlacement} hidden`}>
           <TextBox
             title={"Mes compétences:"}
           />
         </div>
         <div className="logo-container hidden">
-          <CssIcon className={`${classes.svgStyling} hidden`} />
-          <HtmlIcon className={`${classes.svgStyling} hidden`} />
-          <JsIcon className={`${classes.svgStyling} hidden`} />
-          <ReactIcon className={`${classes.svgStyling} hidden`} />
-          <MaterialIcon className={`${classes.svgStyling} hidden`} />
-          <NodejsIcon className={`${classes.svgStyling} hidden`} />
-          <MongodbIcon className={`${classes.svgStyling} hidden`} />
-          <GithubIcon className={`${classes.svgStyling} hidden`} />
+          <div className={`${classes.svgContainer} hidden`}>
+            <div className="logo-wrapper-filter-css"></div>
+            <div className="logo-wrapper-css"></div>
+          </div>
+          <div className={`${classes.svgContainer} hidden`}>
+            <div className="logo-wrapper-filter-html"></div>
+            <div className="logo-wrapper-html"></div>
+          </div>
+          <div className={`${classes.svgContainer} hidden`}>
+            <div className="logo-wrapper-filter-js"></div>
+            <div className="logo-wrapper-js"></div>
+          </div>
+          <div className={`${classes.svgContainer} hidden`}>
+            <div className="logo-wrapper-filter-react"></div>
+            <div className="logo-wrapper-react"></div>
+          </div>
+          <div className={`${classes.svgContainer} hidden`}>
+            <div className="logo-wrapper-filter-material"></div>
+            <div className="logo-wrapper-material"></div>
+          </div>
+          <div className={`${classes.svgContainer} hidden`}>
+            <div className="logo-wrapper-filter-nodejs"></div>
+            <div className="logo-wrapper-nodejs"></div>
+          </div>
+          <div className={`${classes.svgContainer} hidden`}>
+            <div className="logo-wrapper-filter-mongodb"></div>
+            <div className="logo-wrapper-mongodb"></div>
+          </div>
         </div>
       </div>
     </BlurredContainerBox>
