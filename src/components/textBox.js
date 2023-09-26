@@ -57,11 +57,11 @@ function TextBox({ title, firstLine = "", secondLine = "" }) {
   return (
     <TextBoxContainer style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem', marginBottom: '4rem' }}>
       <Box className={`${classes.boxDefaultStyle} hidden`}>
-        <Typography variant="h3" color="primary" className={classes.unskew}>{title}</Typography>
+        <Typography id="textboxtitle" variant="body1" color="primary" className={classes.unskew}>{title}</Typography>
         <div className={classes.alignTextContainer}>
           <div className={classes.presentationText}>
-            <Typography variant="h5" className={classes.coloring}>{firstLine}</Typography>
-            <Typography variant="body1" className={classes.coloring}>{secondLine}</Typography>
+            <Typography id="firstline" variant="body1" className={classes.coloring}>{firstLine}</Typography>
+            <Typography id="secondline" variant="body1" className={classes.coloring}>{secondLine}</Typography>
           </div>
         </div>
       </Box>

@@ -99,12 +99,12 @@ function BlurredContainer() {
           firstLine={"Développeur récemment passioné du web,"}
           secondLine={"j'ai suivi une formation en alternance pour en faire mon métier. Grâce à celle-ci et à mon expérience en entreprise, je conçois désormais des sites web"}
         />
-        <div className={`${classes.titlePlacement} hidden`}>
+        <div id="myprojects" className={`${classes.titlePlacement} hidden`}>
           <TextBox
             title={"Mes projets:"}
           />
         </div>
-        <div id="myprojects" className={classes.worksContainer}>
+        <div className={classes.worksContainer}>
           <WorkCard
             title={'KASA'}
             logo={kasa}

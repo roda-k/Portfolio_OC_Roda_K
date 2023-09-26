@@ -16,6 +16,7 @@ const classes = {
   backdropLogoStyle: `${PREFIX}-backdropLogoStyle`,
   backdropTextContainer: `${PREFIX}-backdropTextContainer`,
   backdropTextStyle: `${PREFIX}-backdropTextStyle`,
+  imgWidth: `${PREFIX}-imgWidth`,
 }
 
 const WorkCardContainer = styled('div')((
@@ -25,7 +26,7 @@ const WorkCardContainer = styled('div')((
 ) => {
   return {
     [`& .${classes.workCardStyle}`]: {
-      // width: '100%',
+      width: '100%',
       maxWidth: '390px',
       padding: '20px',
       minHeight: '150px',
@@ -45,7 +46,9 @@ const WorkCardContainer = styled('div')((
       transform: 'skew(-6deg, 0deg)',
       marginTop: '10px'
     },
-
+    [`& .${classes.imgWidth}`]: {
+      maxWidth: '100%',
+    },
   }
 })
 
@@ -99,7 +102,7 @@ function WorkCard({ title, logo, description, projectUrl }) {
           }}
         >
           <div className={classes.backdropContainer}>
-            <img src={logo} className={classes.backdropLogoStyle} alt="kasa-logo" />
+            <img src={logo} className={classes.backdropLogoStyle} alt="work-logo" />
             <div className={classes.backdropTextContainer}>
               <Typography variant="body1" className={classes.backdropTextStyle}>
                 {mockData[title].description}
@@ -116,7 +119,7 @@ function WorkCard({ title, logo, description, projectUrl }) {
       </BackdropRoot>
       <WorkCardContainer style={{ display: 'flex', justifyContent: 'center', width: '100%', transform: 'skew(6deg, 0deg)', marginBottom: '4rem' }}>
         <div className={`${classes.workCardStyle} hidden`}>
-          <img src={logo} className={classes.unskew} alt="kasa-logo" />
+          <img src={logo} className={`${classes.unskew} ${classes.imgWidth}`} alt="kasa-logo" />
           <Typography variant="h6" color="primary" className={classes.unskew}>{title}</Typography>
           <Typography variant="body1" className={`${classes.coloring} ${classes.unskew}`}>{description}</Typography>
           <div className={classes.iconButtonContainer}>
