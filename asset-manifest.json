@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portfolioOC/static/css/main.6cbf5503.css",
+    "main.js": "/portfolioOC/static/js/main.2d78f630.js",
+    "static/js/787.a1c3bda2.chunk.js": "/portfolioOC/static/js/787.a1c3bda2.chunk.js",
+    "static/media/Kanit-Regular.ttf": "/portfolioOC/static/media/Kanit-Regular.f3bae13d78ced30b6ea3.ttf",
+    "static/media/DEBUG_ICON.png": "/portfolioOC/static/media/DEBUG_ICON.42ed388144eed65ab390.png",
+    "static/media/MON_GRIMOIRE_ICON.png": "/portfolioOC/static/media/MON_GRIMOIRE_ICON.a5db0aa5a3ceb6ed4160.png",
+    "index.html": "/portfolioOC/index.html",
+    "main.6cbf5503.css.map": "/portfolioOC/static/css/main.6cbf5503.css.map",
+    "main.2d78f630.js.map": "/portfolioOC/static/js/main.2d78f630.js.map",
+    "787.a1c3bda2.chunk.js.map": "/portfolioOC/static/js/787.a1c3bda2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cbf5503.css",
+    "static/js/main.2d78f630.js"
+  ]
+}
