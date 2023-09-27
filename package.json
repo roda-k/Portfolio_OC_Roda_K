@@ -1,7 +1,7 @@
 {
   "name": "portfolio_oc_roda_k",
   "version": "0.1.0",
-  "homepage": "https://roda_k.github.io/portfolioOC",
+  "homepage": "https://roda-k.github.io/Portfolio_OC_Roda_K",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
