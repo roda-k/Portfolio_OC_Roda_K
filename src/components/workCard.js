@@ -124,6 +124,7 @@ function WorkCard({ title, logo, description, projectUrl }) {
           <Typography variant="body1" className={`${classes.coloring} ${classes.unskew}`}>{description}</Typography>
           <div className={classes.iconButtonContainer}>
             <IconButton
+              aria-label="Acces projet"
               color="primary"
               onClick={() => {
                 window.open(projectUrl, '_blank')
@@ -131,6 +132,7 @@ function WorkCard({ title, logo, description, projectUrl }) {
               <GitHub />
             </IconButton>
             <IconButton
+              aria-label="Plus d'infos"
               color="primary"
               onClick={() => {
                 setOpenBackdropInfo(true)

@@ -97,7 +97,7 @@ function BlurredContainer() {
         <TextBox
           title={"Présentation"}
           firstLine={"Développeur récemment passioné du web,"}
-          secondLine={"j'ai suivi une formation en alternance pour en faire mon métier. Grâce à celle-ci et à mon expérience en entreprise, je conçois désormais des sites web"}
+          secondLine={"j'ai suivi une formation en alternance pour en faire mon métier. Grâce à celle-ci et à mon expérience en entreprise, je conçois des applications web principalement avec l'aide de JS et React. Je cherche à appronfondir mes compétences et à maîtriser toujours plus de sujets."}
         />
         <div id="myprojects" className={`${classes.titlePlacement} hidden`}>
           <TextBox

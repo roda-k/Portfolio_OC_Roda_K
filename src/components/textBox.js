@@ -22,7 +22,7 @@ const TextBoxContainer = styled('div')((
     [`& .${classes.boxDefaultStyle}`]: {
       display: 'flex',
       flexDirection: 'column',
-      maxHeight: '250px',
+      // maxHeight: '250px',
       width: '100%',
       padding: '20px 15px 15px 25px',
       transform: 'skewX(10deg)',
@@ -45,6 +45,7 @@ const TextBoxContainer = styled('div')((
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-start',
+      paddingLeft: '10px',
       width: 'fit-content',
       margin: '10px 0 10px 0',
       transform: 'skewX(-10deg)'

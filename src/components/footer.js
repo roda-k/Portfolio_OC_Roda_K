@@ -9,9 +9,9 @@ const classes = {
   footerBox: `${PREFIX}-footerBox`,
   footerTextStyle: `${PREFIX}-footerTextStyle`,
   mentionsStyle: `${PREFIX}-mentionsStyle`,
-  // backdropContainer: `${PREFIX}-backdropContainer`,
-  // backdropTextStyle: `${PREFIX}-backdropTextStyle`,
-  // backdropTextContainer: `${PREFIX}-backdropTextContainer`,
+  backdropContainer: `${PREFIX}-backdropContainer`,
+  backdropTextStyle: `${PREFIX}-backdropTextStyle`,
+  backdropTextContainer: `${PREFIX}-backdropTextContainer`,
 }
 
 const FooterContainer = styled('div')((
@@ -32,7 +32,11 @@ const FooterContainer = styled('div')((
     },
     [`& .${classes.footerTextStyle}`]: {
       color: "rgba(255, 255, 255, 1)",
-      marginBottom: '1rem',
+      textDecoration: 'underline',
+      '&:hover': {
+        cursor: 'pointer',
+      }
+      // marginBottom: '1rem',
     },
     [`& .${classes.mentionsStyle}`]: {
       color: "rgba(255, 255, 255, 0.7)",
@@ -45,46 +49,46 @@ const FooterContainer = styled('div')((
   }
 })
 
-// const BackdropRoot = styled('div')((
-//   {
-//     theme
-//   }
-// ) => {
-//   return {
-//     [`& .${classes.backdropContainer}`]: {
-//       display: 'flex',
-//       flexDirection: 'column',
-//       alignItems: 'center',
-//       width: '80%',
-//       padding: '20px',
-//       background: '#323232',
-//       zIndex: '20',
-//     },
-//     [`& .${classes.backdropTextStyle}`]: {
-//       display: 'flex',
-//       justifyContent: 'center',
-//       color: 'rgba(255, 255, 255, 1)',
-//       marginBottom: '2rem',
-//     },
-//     [`& .${classes.backdropTextContainer}`]: {
-//       display: 'flex',
-//       flexDirection: 'column',
-//       alignItems: 'center',
-//       maxHeight: '400px',
-//       width: '100%',
-//       marginTop: '1rem',
-//       overflowY: 'auto'
-//     },
-//   }
-// })
+const BackdropRoot = styled('div')((
+  {
+    theme
+  }
+) => {
+  return {
+    [`& .${classes.backdropContainer}`]: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '80%',
+      padding: '20px',
+      background: '#323232',
+      zIndex: '20',
+    },
+    [`& .${classes.backdropTextStyle}`]: {
+      display: 'flex',
+      justifyContent: 'center',
+      color: 'rgba(255, 255, 255, 1)',
+      marginBottom: '2rem',
+    },
+    [`& .${classes.backdropTextContainer}`]: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      maxHeight: '400px',
+      width: '100%',
+      marginTop: '1rem',
+      overflowY: 'auto'
+    },
+  }
+})
 
 function MyFooter() {
 
-  // const [openBackdropMentions, setOpenBackdropMentions] = useState(false)
+  const [openBackdropMentions, setOpenBackdropMentions] = useState(false)
 
   return (
     <>
-      {/* <BackdropRoot sx={{ zIndex: '20' }}>
+      <BackdropRoot sx={{ zIndex: '20' }}>
         <Backdrop
           open={openBackdropMentions}
           onClick={() => {
@@ -93,8 +97,11 @@ function MyFooter() {
         >
           <div className={classes.backdropContainer}>
             <div className={classes.backdropTextContainer}>
+            <Typography variant="body1" className={classes.backdropTextStyle}>
+                {"Mentions légales:"}
+              </Typography>
               <Typography variant="body1" className={classes.backdropTextStyle}>
-                {"RODA Kévin"}
+                {"Créé par RODA Kévin"}
               </Typography>
               <Typography variant="body1" className={classes.backdropTextStyle}>
                 {"Domicilé au 2 Chemin du moulin, 31840 Seilh"}
@@ -102,24 +109,30 @@ function MyFooter() {
               <Typography variant="body1" className={classes.backdropTextStyle}>
                 {"Contactable via l'adresse qui suit: kevin.gallau@outlook.fr"}
               </Typography>
+              <Typography variant="body1" className={classes.backdropTextStyle}>
+                {"Informations relatives à l'hébergement:"}
+              </Typography>
+              <Typography variant="body1" className={classes.backdropTextStyle}>
+                {"GitHub, Inc. c/o Corporation Service Company 2710 Gateway Oaks Drive, Suite 150N Sacramento, CA 95833-3505"}
+              </Typography>
+              <Typography variant="body1" className={classes.backdropTextStyle}>
+                {"Contact: legal-support@github.com"}
+              </Typography>
             </div>
           </div>
         </Backdrop>
-      </BackdropRoot> */}
+      </BackdropRoot>
       <FooterContainer>
         <Box className={classes.footerBox}>
-          <Typography variant="caption" className={classes.footerTextStyle}>
-            {"© 2023 Kévin RODA, Tous droits réservés."}
-          </Typography>
-          {/* <Typography
-          variant="caption"
-          className={classes.mentionsStyle}
+          <Typography
+            variant="caption"
+            className={classes.footerTextStyle}
             onClick={() => {
               setOpenBackdropMentions(true)
             }}
           >
-            {"Mentions légales"}
-          </Typography> */}
+            {"© 2023 Kévin RODA, Tous droits réservés."}
+          </Typography>
         </Box>
       </FooterContainer>
     </>
