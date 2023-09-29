@@ -53,12 +53,12 @@ const TextBoxContainer = styled('div')((
   }
 })
 
-function TextBox({ title, firstLine = "", secondLine = "" }) {
+function TextBox({ title, heading, firstLine = "", secondLine = "" }) {
 
   return (
     <TextBoxContainer style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem', marginBottom: '4rem' }}>
       <Box className={`${classes.boxDefaultStyle} hidden`}>
-        <Typography id="textboxtitle" variant="body1" color="primary" className={classes.unskew}>{title}</Typography>
+        <Typography id="textboxtitle" variant={`${heading}`} color="primary" className={classes.unskew}>{title}</Typography>
         <div className={classes.alignTextContainer}>
           <div className={classes.presentationText}>
             <Typography id="firstline" variant="body1" className={classes.coloring}>{firstLine}</Typography>

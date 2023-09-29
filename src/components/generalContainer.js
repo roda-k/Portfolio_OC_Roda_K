@@ -59,13 +59,6 @@ const BlurredContainerBox = styled('div')((
       marginBottom: '2rem',
       marginTop: '2rem',
     },
-    // [`& .${classes.logoWrapperFilterCss}`]: {
-    //   position: 'absolute',
-    //   width: '90%',
-    //   height: '100%',
-    //   backgroundImage: `url(${CssIcon})`,
-    //   zIndex: 12,
-    // },
   }
 })
 
@@ -91,17 +84,20 @@ function BlurredContainer() {
       <div className={classes.container}>
         <TextBox
           title={"Bonjour,"}
+          heading={"h1"}
           firstLine={"je suis Kévin Roda"}
           secondLine={"et je vous présente ici mon parcours de Développeur Web"}
         />
         <TextBox
           title={"Présentation"}
+          heading={"h2"}
           firstLine={"Développeur récemment passioné du web,"}
           secondLine={"j'ai suivi une formation en alternance pour en faire mon métier. Grâce à celle-ci et à mon expérience en entreprise, je conçois des applications web principalement avec l'aide de JS et React. Je cherche à appronfondir mes compétences et à maîtriser toujours plus de sujets."}
         />
         <div id="myprojects" className={`${classes.titlePlacement} hidden`}>
           <TextBox
             title={"Mes projets:"}
+            heading={"h3"}
           />
         </div>
         <div className={classes.worksContainer}>
@@ -127,6 +123,7 @@ function BlurredContainer() {
         <div id="skills" className={`${classes.titlePlacement} hidden`}>
           <TextBox
             title={"Mes compétences:"}
+            heading={"h3"}
           />
         </div>
         <div className="logo-container hidden">
