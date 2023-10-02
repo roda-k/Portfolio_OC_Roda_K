@@ -36,7 +36,6 @@ const FooterContainer = styled('div')((
       '&:hover': {
         cursor: 'pointer',
       }
-      // marginBottom: '1rem',
     },
     [`& .${classes.mentionsStyle}`]: {
       color: "rgba(255, 255, 255, 0.7)",

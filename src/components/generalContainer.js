@@ -3,7 +3,6 @@ import { styled } from "@mui/material/styles";
 import kasa from '../assets/LOGO_KASA.png'
 import grimoire from '../assets/MON_GRIMOIRE_ICON.png'
 import debug from '../assets/DEBUG_ICON.png'
-// import { ReactComponent as CssIcon } from '../assets/CSS3_ICON.svg'
 import TextBox from "./textBox";
 import WorkCard from "./workCard";
 import MyFooter from "./footer";
